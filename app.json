@@ -1,0 +1,13 @@
+{
+  "name": "released",
+  "displayName": "released",
+  "expo": {
+    "name": "released",
+    "slug": "released",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "description": ""
+  }
+}
