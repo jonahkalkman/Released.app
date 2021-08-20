@@ -31,17 +31,17 @@ export default function Search() {
   ];
 
   const renderArtist = ({ item }: { item: Artist }) =>  (
-    <ArtistCard url={item.name} artist={item} />
+    <ArtistCard url={item.name} artist ={item}/>
   );
 
   return (
     <SearchWrapper>
       <SearchTitle>Following artists</SearchTitle> 
-      <FlatList data={artists} renderItem={renderArtist} horizontal={true} />
+      <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
       <SearchTitle>Suggested artists</SearchTitle> 
-      <FlatList data={artists} renderItem={renderArtist} horizontal={true} />
+      <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
       <SearchTitle>Genres</SearchTitle> 
-      <FlatList data={artists} renderItem={renderArtist} horizontal={true} />
+      <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
     </SearchWrapper>
   );
 };

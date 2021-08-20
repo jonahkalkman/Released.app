@@ -4,6 +4,7 @@ export const ArtistCardWrapper = styled.Pressable`
   background-color: #202020;
   border-radius: 5px;
   align-self: flex-start;
+  margin-right: 20px;
 `;
 
 export const ArtistCardImage = styled.Image`
