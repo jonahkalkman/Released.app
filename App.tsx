@@ -5,7 +5,7 @@ import AppLoading from 'expo-app-loading';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFonts, Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
 
-import Home from './pages/home/Home';
+import HomeStackScreen from './navigators/HomeNavigator';
 import Search from './pages/search/Search';
 import Settings from './pages/settings/Settings';
 import Menu from './components/menu/Menu';
@@ -23,11 +23,17 @@ export default function App() {
   }
 
   return (
-    <Menu pages={[
-        {name: 'Releases', component: Home}, 
+      <Menu pages={[
+        {name: 'Releases', component: HomeStackScreen}, 
         {name: 'Zoeken', component: Search},
         {name: 'Instellingen', component: Settings}
       ]}
     />
+    // <NavigationContainer>
+    //   <Tab.Navigator>
+    //     <Tab.Screen name="Home" component={HomeStackScreen} />
+    //     {/* <Tab.Screen name="Settings" component={SettingsStackScreen} /> */}
+    //   </Tab.Navigator>
+    // </NavigationContainer>
   );
 };

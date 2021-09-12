@@ -1,11 +1,16 @@
 import React from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Pressable } from 'react-native';
 import styling from './styles';
 
 import { Release } from '../../api/types';
 import Card from '../../components/card/Card';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigators/HomeNavigator'
 
-export default function Home() {
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+
+export default function Home({navigation}: Props) {
 
   const releases: Release[] = [
     {
@@ -77,7 +82,9 @@ export default function Home() {
       <Text style={styling.title}>Your releases</Text>
       {releases.map((release, index) => {
         return ( 
+          <Pressable onPress={() => navigation.navigate('Details')}>
             <Card release={release} key={index} /> 
+          </Pressable>
           )
       })}
     </ScrollView>
