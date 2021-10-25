@@ -40,12 +40,13 @@ export default function Menu(props: Props) {
           inactiveTintColor: 'gray',
           style:{
             backgroundColor: "black",
-            height: 100,
+            height: 60,
             paddingTop: 10
           },
           labelStyle: {
             color: 'white'
-          }
+          },
+          showLabel: false
         }}
       >
         {props.pages.map((item, index) => {

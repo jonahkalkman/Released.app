@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View, ScrollView, Pressable } from 'react-native';
-import styling from './styles';
+import { Pressable } from 'react-native';
+import { HomeWrapper, HomeTitle } from './styles'
 
 import { Release } from '../../api/types';
 import Card from '../../components/card/Card';
@@ -78,15 +78,15 @@ export default function Home({navigation}: Props) {
 
   ]
   return (
-    <ScrollView style={styling.container}>
-      <Text style={styling.title}>Your releases</Text>
+    <HomeWrapper contentContainerStyle={{justifyContent: 'center', alignItems: 'center',}}>
+      <HomeTitle>Latest releases</HomeTitle>
       {releases.map((release, index) => {
         return ( 
-          <Pressable onPress={() => navigation.navigate('Details')}>
-            <Card release={release} key={index} /> 
+          <Pressable onPress={() => navigation.navigate('Details')} key={index}>
+            <Card release={release} /> 
           </Pressable>
-          )
+        )
       })}
-    </ScrollView>
+    </HomeWrapper>
   );
 };

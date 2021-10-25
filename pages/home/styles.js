@@ -1,16 +1,15 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
-export default StyleSheet.create({
-  container: {
-    padding: 16,
-    flex: 1, 
-    backgroundColor: 'black',
-    paddingTop: 60
-  },
-  title: {
-    fontSize: 18,
-    color: 'white',
-    fontFamily: 'Montserrat_600SemiBold',
-    marginBottom: 15
-  }
-});
+export const HomeWrapper = styled.ScrollView`
+  background-color: black;
+  padding: 0px 16px;
+`;
+
+export const HomeTitle = styled.Text`
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  align-self: flex-start;
+`;

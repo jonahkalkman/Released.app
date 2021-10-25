@@ -10,7 +10,7 @@ interface Props {
 export default function ShareButton(props: Props) {
   return (
     <ShareButtonWrapper onPress={() => props.url}>
-      <Entypo name="share" size={20} color="white" />
+      <Entypo name="reply" size={20} color="white" style={{transform: [{scaleX: -1}]}}/>
     </ShareButtonWrapper>
   );
 };
