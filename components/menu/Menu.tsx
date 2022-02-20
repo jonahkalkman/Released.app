@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 interface Page {
   name: string;
@@ -20,9 +20,8 @@ export default function Menu(props: Props) {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ focused, color }) => {
             let iconName: string; 
-
             if (route.name === 'Releases') {
               iconName = focused
                 ? 'md-notifications'
@@ -32,26 +31,24 @@ export default function Menu(props: Props) {
             } else if (route.name === 'Instellingen') {
               iconName = focused ? 'ellipsis-vertical' : 'ellipsis-vertical';
             }
-            return <Ionicons name={iconName!} size={size} color={color} />;
+            return <Ionicons name={iconName!} size={20} color={color} />;
           },
+          tabBarIndicatorContainerStyle: {
+            backgroundColor: 'black',
+          },
+          tabBarActiveTintColor: 'white',
+          tabBarShowLabel: false
         })}
-        tabBarOptions={{
-          activeTintColor: '#48C993',
-          inactiveTintColor: 'gray',
-          style:{
-            backgroundColor: "black",
-            height: 60,
-            paddingTop: 10
-          },
-          labelStyle: {
-            color: 'white'
-          },
-          showLabel: false
-        }}
+        tabBarPosition='bottom'
       >
         {props.pages.map((item, index) => {
           return (
-            <Tab.Screen key={index} name={item.name} component={item.component} />
+            <Tab.Screen 
+              key={index} 
+              name={item.name} 
+              component={item.component}    
+              options={{ title: 'My home' }} 
+            />
           );
         })} 
       </Tab.Navigator>
@@ -61,6 +58,8 @@ export default function Menu(props: Props) {
 
 const styles = StyleSheet.create({
   NavigationContainer: {
-    backgroundColor: '#FF0000',
+    backgroundColor: 'transparent',
+    borderTopColor: 'red',
+    borderTopWidth: 30
   },
 });

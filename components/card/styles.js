@@ -1,18 +1,18 @@
 import styled from 'styled-components/native';
 
 export const CardWrapper = styled.View`
-  height: 140px;
   min-width: 100%;
   border-radius: 5px;
   margin-bottom: 25px;
-  background-color: #202020;
+  background-color: white;
   flex-direction: row;
 `;
 
 export const CardImage = styled.Image`
-  width: 140px;
-  border-top-left-radius: 5px;
+  width: 100px;
+  height: 100px;
   border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 `;
 
 export const CardDetails = styled.View`
@@ -20,11 +20,15 @@ export const CardDetails = styled.View`
 `;
 
 export const CardTitle = styled.Text`
-  color: white;
+  color: black;
   font-size: 18px;
   margin-bottom: 20px;
 `;
 
-export const CardButtons = styled.View`
-  flex-direction: row;
+export const CardTag = styled.Text`
+  padding: 10px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  border-radius: 5px;
 `;

@@ -9,6 +9,6 @@ interface Props {
 
 export default function PlayButton(props: Props) {
   return (
-    <Entypo name="controller-play" size={35} color="green" />
+    <Entypo name="controller-play" size={35} color="white" />
   );
 };

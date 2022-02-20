@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const HomeWrapper = styled.ScrollView`
   background-color: black;
-  padding: 0px 16px;
+  padding: 20px;
 `;
 
 export const HomeTitle = styled.Text`
@@ -10,6 +10,6 @@ export const HomeTitle = styled.Text`
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   align-self: flex-start;
 `;

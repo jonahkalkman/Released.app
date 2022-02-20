@@ -1,11 +1,16 @@
 import React from 'react';
-import { Pressable } from 'react-native';
-import { HomeWrapper, HomeTitle } from './styles'
-
+import { HomeTitle, HomeWrapper } from './styles'
 import { Release } from '../../api/types';
 import Card from '../../components/card/Card';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../navigators/HomeNavigator'
+import { Button, Image, ScrollView, Text, View } from 'react-native';
+
+const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64
+};
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -78,15 +83,15 @@ export default function Home({navigation}: Props) {
 
   ]
   return (
-    <HomeWrapper contentContainerStyle={{justifyContent: 'center', alignItems: 'center',}}>
-      <HomeTitle>Latest releases</HomeTitle>
-      {releases.map((release, index) => {
-        return ( 
-          <Pressable onPress={() => navigation.navigate('Details')} key={index}>
-            <Card release={release} /> 
-          </Pressable>
-        )
-      })}
-    </HomeWrapper>
+    <ScrollView style={{backgroundColor: 'black'}}>
+      <HomeWrapper>
+        <HomeTitle>Your Releases</HomeTitle>
+        {releases.map((prop, key) => {
+          return (
+            <Card release={prop} key={key}/>
+          );
+        })}
+      </HomeWrapper>
+    </ScrollView>
   );
 };

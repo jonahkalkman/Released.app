@@ -30,11 +30,5 @@ export default function App() {
         ]}
       />
     </SafeAreaView>
-    // <NavigationContainer>
-    //   <Tab.Navigator>
-    //     <Tab.Screen name="Home" component={HomeStackScreen} />
-    //     {/* <Tab.Screen name="Settings" component={SettingsStackScreen} /> */}
-    //   </Tab.Navigator>
-    // </NavigationContainer>
   );
 };
