@@ -11,7 +11,7 @@ interface Props {
 export default function ArtistCard(props: Props) {
   return (
     <ArtistCardWrapper onPress={() => props.url}>
-      <ArtistCardImage source={{uri: 'https://via.placeholder.com/140'}}/>
+      <ArtistCardImage source={{uri: 'https://picsum.photos/140/140'}}/>
       <ArtistCardDetails>
         <ArtistCardTitle>{props.artist.name}</ArtistCardTitle>
         <FollowButton artist={props.artist} /> 

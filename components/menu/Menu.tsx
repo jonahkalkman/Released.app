@@ -37,7 +37,8 @@ export default function Menu(props: Props) {
             backgroundColor: 'black',
           },
           tabBarActiveTintColor: 'white',
-          tabBarShowLabel: false
+          tabBarShowLabel: false,
+          tabBarIndicatorStyle: {display: 'none'}
         })}
         tabBarPosition='bottom'
       >

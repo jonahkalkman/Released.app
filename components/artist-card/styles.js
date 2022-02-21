@@ -1,10 +1,11 @@
 import styled from 'styled-components/native';
 
 export const ArtistCardWrapper = styled.Pressable`
-  background-color: #202020;
+  background-color: white;
   border-radius: 5px;
   align-self: flex-start;
   margin-right: 20px;
+  margin-bottom: 40px;
 `;
 
 export const ArtistCardImage = styled.Image`
@@ -19,7 +20,7 @@ export const ArtistCardDetails = styled.View`
 `;
 
 export const ArtistCardTitle = styled.Text`
-  color: white;
+  color: black;
   font-size: 14px;
   font-weight: 600;
   fontFamily: 'Montserrat_600SemiBold';

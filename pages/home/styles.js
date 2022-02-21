@@ -13,3 +13,8 @@ export const HomeTitle = styled.Text`
   margin-bottom: 20px;
   align-self: flex-start;
 `;
+
+export const HomeCardDate = styled.Text`
+  margin-top: 10px;
+  margin-bottom: 25px;
+`;

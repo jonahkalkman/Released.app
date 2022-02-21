@@ -8,6 +8,8 @@ import Search from './pages/search/Search';
 import Settings from './pages/settings/Settings';
 import Menu from './components/menu/Menu';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import SearchStackNavigator from './navigators/SearchNavigator';
+import Header from './components/header/Header';
 
 
 const Tab = createBottomTabNavigator();
@@ -23,9 +25,10 @@ export default function App() {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+      <Header/>
       <Menu pages={[
           {name: 'Releases', component: HomeStackScreen}, 
-          {name: 'Zoeken', component: Search},
+          {name: 'Zoeken', component: SearchStackNavigator},
           {name: 'Instellingen', component: Settings}
         ]}
       />
