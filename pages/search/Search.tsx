@@ -57,11 +57,11 @@ export default function Search({navigation}: Props) {
           placeholderTextColor={'black'} 
           onSubmitEditing={onSubmitSearch}
         />
-        <SearchTitle>Following artists</SearchTitle> 
+        <SearchTitle>Your artists</SearchTitle> 
         <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
-        <SearchTitle>Suggested artists</SearchTitle> 
+        <SearchTitle>Discover new music</SearchTitle> 
         <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
-        <SearchTitle>Genres</SearchTitle> 
+        <SearchTitle>Your genres</SearchTitle> 
         <FlatList data={artists} renderItem={renderArtist} horizontal={true} keyExtractor={(item, index) => 'key' + index} />
       </SearchWrapper>
     </ScrollView>

@@ -6,11 +6,10 @@ export const SearchWrapper = styled.ScrollView`
 `;
 
 export const SearchTitle = styled.Text`
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   align-self: flex-start;
 `;
 

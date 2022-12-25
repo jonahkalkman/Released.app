@@ -2,25 +2,25 @@ import styled from 'styled-components/native';
 
 export const CardWrapper = styled.View`
   border-radius: 5px;
-  background-color: white;
   flex-direction: row;
+  margin-bottom: 25px;
 `;
 
 export const CardImage = styled.Image`
-  width: 100px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  width: 50px;
+  height: 50px;
 `;
 
 export const CardDetails = styled.View`
-  padding: 20px;
+  padding: 5px 15px;
   flex: 1;
 `;
 
 export const CardTitle = styled.Text`
-  color: black;
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
 `;
 
 export const CardTags = styled.View` 
@@ -30,15 +30,11 @@ export const CardTags = styled.View`
 
 export const CardTag = styled.View`
   align-self: flex-start;
-  padding: 5px 10px;
-  background-color: black;
-  border-radius: 5px;
   margin-right: 10px;
 `;
 
 export const CardTagText = styled.Text`
-  font-weight: bold;
-  color: white;
+  color: grey;
   font-size: 12px;
 `;
 

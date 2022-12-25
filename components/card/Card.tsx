@@ -25,9 +25,9 @@ export default function Card(props: Props) {
             </CardTag>
           )}
         </CardTags>
-        <CardButton>
+        {/* <CardButton>
           <PlayButton url='w'></PlayButton>
-        </CardButton>
+        </CardButton> */}
       </CardDetails>
     </CardWrapper>
   );

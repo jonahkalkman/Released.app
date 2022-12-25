@@ -80,13 +80,10 @@ export default function Home({navigation}: Props) {
   return (
     <ScrollView style={{backgroundColor: 'black'}}>
       <HomeWrapper>
-        <HomeTitle>Your Releases</HomeTitle>
+        <HomeTitle>Your new music releases</HomeTitle>
         {releases.map((prop, key) => {
-          return (
-            <>
-              <Card release={prop} key={key}/>
-              <HomeCardDate style={{color: 'white', textAlign: 'right'}}>{formatDistance(prop.releaseDate, new Date(), { addSuffix: true })}</HomeCardDate>
-            </>
+          return (   
+            <Card release={prop} key={key}/>
           );
         })}
       </HomeWrapper>
